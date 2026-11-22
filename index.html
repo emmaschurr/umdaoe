@@ -445,10 +445,6 @@ function pick(cb){
 document.querySelectorAll(".photo[data-slot]").forEach(function(el){
   el.addEventListener("click",function(){pick(function(src){el.style.backgroundImage="url("+src+")";el.classList.add("has")})});
 });
-var hero=document.querySelector(".hero");
-hero.querySelector(".hero-edit").addEventListener("click",function(){
-  pick(function(src){hero.style.backgroundImage="linear-gradient(var(--hero-ov),var(--hero-ov)),url("+src+")"});
-});
 
 // Mobile menu + active link highlight
 document.querySelectorAll("nav a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("nav").classList.remove("open")})});
